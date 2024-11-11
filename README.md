@@ -122,7 +122,3 @@ https://github.com/user-attachments/assets/27334655-4643-4df6-bfbd-8c9f11b1eb31
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-Feel free to adjust the content based on specific project details or custom configurations you might have added!
