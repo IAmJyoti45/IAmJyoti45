@@ -93,13 +93,17 @@ RegistrationManagementSystem/
 - **Admin Dashboard:** After logging in as an admin, view and manage user information through the dashboard.
 - **Data Display:** Use the "Show Users" option to retrieve and display registered users in a table format.
 
-## Screenshots
+## Screenshots and video
 
 ### Registration Form
-![Registration Form](path/to/registration-form-screenshot.png)
+![Screenshot 2024-11-11 233118](https://github.com/user-attachments/assets/6840c3f0-2040-4110-9434-becc3eba99ce)
 
 ### User Dashboard
-![User Dashboard](path/to/user-dashboard-screenshot.png)
+![User Dashboard](https://github.com/user-attachments/assets/7fe3e9c3-3c12-4734-ab9d-664673bc70e0)
+### video
+https://github.com/user-attachments/assets/27334655-4643-4df6-bfbd-8c9f11b1eb31
+
+
 
 ## Future Enhancements
 
