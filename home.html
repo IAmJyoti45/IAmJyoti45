@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form with Logo</title>
+    <style>
+        /* Base styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            overflow: hidden;
+            animation: gradientBackground 8s infinite alternate;
+            position: relative;
+        }
+
+        /* Background animation */
+        @keyframes gradientBackground {
+            0% { background: linear-gradient(135deg, #6a11cb, #2575fc); }
+            100% { background: linear-gradient(135deg, #2575fc, #6a11cb); }
+        }
+
+        /* Logo styling */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #000;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            line-height: 60px;
+            cursor: pointer;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        /* Transparent Form styling */
+        form {
+            background: rgba(255, 255, 255, 0.5); /* More transparent white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px 0;
+        }
+
+        input[type="text"], input[type="password"], input[type="email"],
+        input[type="number"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #6a11cb;
+            box-shadow: 0 0 5px rgba(106, 17, 203, 0.3);
+            outline: none;
+        }
+
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Register button animation */
+        button[type="submit"] {
+            background: linear-gradient(45deg, #32cd32, #00ff7f);
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 255, 127, 0.3);
+        }
+
+        /* Reset button animation */
+        button[type="reset"] {
+            background: linear-gradient(45deg, #ff4d4d, #ff1a1a);
+        }
+
+        button[type="reset"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(255, 77, 77, 0.3);
+        }
+
+        /* Link styling */
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #6a11cb;
+            text-decoration: underline;
+        }
+
+        /* Fade-in animation for form */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo" onclick="toggleLogo()">JS</div>
+
+    <!-- Registration Form -->
+    <form action="register" method="post">
+        <h2>Registration Form</h2>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="userName" required></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td><input type="number" name="mobile" required></td>
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>
+                    <select name="city">
+    <option>city</option>            
+    <option value="mumbai">Mumbai</option>
+    <option value="delhi">Delhi</option>
+    <option value="bangalore">Bangalore</option>
+    <option value="hyderabad">Hyderabad</option>
+    <option value="ahmedabad">Ahmedabad</option>
+    <option value="chennai">Chennai</option>
+    <option value="kolkata">Kolkata</option>
+    <option value="surat">Surat</option>
+    <option value="pune">Pune</option>
+    <option value="jaipur">Jaipur</option>
+    <option value="lucknow">Lucknow</option>
+    <option value="kanpur">Kanpur</option>
+    <option value="nagpur">Nagpur</option>
+    <option value="indore">Indore</option>
+    <option value="thane">Thane</option>
+    <option value="bhopal">Bhopal</option>
+    <option value="visakhapatnam">Visakhapatnam</option>
+    <option value="pimpri-chinchwad">Pimpri-Chinchwad</option>
+    <option value="patna">Patna</option>
+    <option value="vadodara">Vadodara</option>
+    <option value="ghaziabad">Ghaziabad</option>
+    <option value="ludhiana">Ludhiana</option>
+    <option value="agra">Agra</option>
+    <option value="nashik">Nashik</option>
+    <option value="faridabad">Faridabad</option>
+    <option value="meerut">Meerut</option>
+    <option value="rajkot">Rajkot</option>
+    <option value="kalyan-dombivli">Kalyan-Dombivli</option>
+    <option value="vasai-virar">Vasai-Virar</option>
+    <option value="varanasi">Varanasi</option>
+    <option value="srinagar">Srinagar</option>
+    <option value="aurangabad">Aurangabad</option>
+    <option value="dhanbad">Dhanbad</option>
+    <option value="amritsar">Amritsar</option>
+    <option value="navi mumbai">Navi Mumbai</option>
+    <option value="allahabad">Allahabad</option>
+    <option value="ranchi">Ranchi</option>
+    <option value="howrah">Howrah</option>
+    <option value="coimbatore">Coimbatore</option>
+    <option value="jabalpur">Jabalpur</option>
+    <option value="gwalior">Gwalior</option>
+    <option value="vijayawada">Vijayawada</option>
+    <option value="jodhpur">Jodhpur</option>
+    <option value="madurai">Madurai</option>
+    <option value="raipur">Raipur</option>
+    <option value="kota">Kota</option>
+    <option value="guwahati">Guwahati</option>
+    <option value="chandigarh">Chandigarh</option>
+    <option value="solapur">Solapur</option>
+    <option value="hubli-dharwad">Hubli-Dharwad</option>
+    <option value="bareilly">Bareilly</option>
+    <option value="moradabad">Moradabad</option>
+    <option value="mysore">Mysore</option>
+    <option value="gurgaon">Gurgaon</option>
+    <option value="aligarh">Aligarh</option>
+    <option value="jalandhar">Jalandhar</option>
+    <option value="tiruchirappalli">Tiruchirappalli</option>
+    <option value="bhubaneswar">Bhubaneswar</option>
+    <option value="salem">Salem</option>
+    <option value="warangal">Warangal</option>
+    <option value="mira-bhayandar">Mira-Bhayandar</option>
+    <option value="guntur">Guntur</option>
+    <option value="bhiwandi">Bhiwandi</option>
+    <option value="saharanpur">Saharanpur</option>
+    <option value="gorakhpur">Gorakhpur</option>
+    <option value="bikaner">Bikaner</option>
+    <option value="amravati">Amravati</option>
+    <option value="noida">Noida</option>
+    <option value="jamshedpur">Jamshedpur</option>
+    <option value="bhilai">Bhilai</option>
+    <option value="cuttack">Cuttack</option>
+    <option value="firozabad">Firozabad</option>
+    <option value="kochi">Kochi</option>
+    <option value="bhavnagar">Bhavnagar</option>
+    <option value="dehradun">Dehradun</option>
+    <option value="durgapur">Durgapur</option>
+    <option value="asansol">Asansol</option>
+    <option value="nanded">Nanded</option>
+    <option value="ajmer">Ajmer</option>
+    <option value="ujjain">Ujjain</option>
+    <option value="siliguri">Siliguri</option>
+    <option value="jhansi">Jhansi</option>
+    <option value="ulhasnagar">Ulhasnagar</option>
+    <option value="jammu">Jammu</option>
+    <option value="sangli">Sangli</option>
+    <option value="mangalore">Mangalore</option>
+    <option value="meerut">Meerut</option>
+    <option value="tirunelveli">Tirunelveli</option>
+</select>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Register</button>
+                    <button type="reset">Cancel</button>
+                </td>
+            </tr>
+        </table>
+        <a href="showdata">Show Users</a>
+    </form>
+
+ 
+
+</body>
+</html>
